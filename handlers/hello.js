@@ -10,7 +10,7 @@ const logger = require('logger')(version, envName, 'redisUtils');
  */
 exports.hello = async (event, context) => {
   // http
-  logger.log('http.called', 'we have called in our http handler!', {client_id: 'something can go here'});
+  logger.log('http.called', 'we have called in our http handler!', {client_id: 'something can go here', event, context});
   return {
     statusCode: 200,
     body: JSON.stringify({message: 'hello'})

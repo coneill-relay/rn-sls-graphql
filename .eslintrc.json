@@ -1,0 +1,30 @@
+{
+  "globals": {
+    "angular": true
+  },
+  "ignorePatterns": ["coverage/", "node_modules/", "nyc_output/", ".serverless/", "configs"],
+  "extends": "airbnb-base",
+  "rules": {
+    "import/no-unresolved": ["error", { "commonjs": false, "caseSensitive": true }],
+    "camelcase": "off",
+    "arrow-body-style": "off",
+    "comma-dangle": "off",
+    "consistent-return":"off",
+    "prefer-destructuring": "off",
+    "object-curly-spacing": "off",
+    "object-curly-newline": "off",
+    "no-extra-boolean-cast": "off",
+    "quote-props": "off",
+    "object-shorthand": "off",
+    "dot-notation": "off",
+    "no-param-reassign": "off",
+    "no-else-return": "off",
+    "no-plusplus": "off",
+    "no-console": "off",
+    "padded-blocks": "off",
+    "max-len": "off",
+    "spaced-comment": "off",
+    "no-new": "off",
+    "no-case-declarations": "off"
+  }
+}
