@@ -1,0 +1,9 @@
+region: us-east-1
+
+vpc:
+  securityGroupIds:
+    - sg-0892e473
+  subnetIds:
+    - subnet-4756bc1f
+    - subnet-5f0bd829
+    - subnet-c10cebeb
