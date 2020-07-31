@@ -1,0 +1,2 @@
+exports.sampleEvent = {};
+exports.sampleContext = {};
