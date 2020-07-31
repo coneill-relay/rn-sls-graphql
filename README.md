@@ -38,6 +38,17 @@ npm run lint
 ```shell script
 npm test
 ```
+
+```shell script
+  1 passing (6ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |                   
+ hello.js |     100 |      100 |     100 |     100 |                   
+----------|---------|----------|---------|---------|-------------------
+```
 Tools:
 - [mocha](https://mochajs.org/)
 - [istanbul](https://istanbul.js.org/)
