@@ -28,6 +28,11 @@ Reference: https://www.serverless.com/framework/docs/providers/aws/cli-reference
   - **handlers** - testing of handlers. good for testing return types (HTTP vs SQS)
 - **serverless.yml** - base file for defining serverless projects
 
+## Linting
+```shell script
+npm run lint
+```
+
 ## Testing
 ### Unit testing
 ```shell script
