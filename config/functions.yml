@@ -1,5 +1,7 @@
 hello:
   handler: handlers/hello.hello
+  environment:
+    RN_TEST: 'testing an env variable'
   events:
     - http:
         path: hello
