@@ -33,6 +33,13 @@ Reference: https://www.serverless.com/framework/docs/providers/aws/cli-reference
 ```shell script
 npm test
 ```
+Tools:
+- [mocha](https://mochajs.org/)
+- [istanbul](https://istanbul.js.org/)
+- [nyc](https://github.com/istanbuljs/nyc)
+- [sinon](https://sinonjs.org/)
+- [proxyquire](https://www.npmjs.com/package/proxyquire)
+
 ### Manual testing
 Datadog query - `functionname:aws-nodejs-template-dev-hello` The naming will follow the pattern `servicename-env-functionname`.
 
