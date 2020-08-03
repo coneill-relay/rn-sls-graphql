@@ -1,6 +1,6 @@
 const version = require('../package.json').version;
 const envName = process.env.ENV_NAME;
-const logger = require('logger')(version, envName, 'redisUtils');
+const logger = require('logger')(version, envName, 'sls.template');
 
 /**
  *
