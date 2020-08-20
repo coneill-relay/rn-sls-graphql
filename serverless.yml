@@ -2,13 +2,16 @@
 # Link to confluence page
 
 service: aws-nodejs-template
-
+plugins:
+  - serverless-webpack
+package:
+  individually: true
 provider:
   name: aws
   runtime: nodejs12.x
   versionFunctions: false
   stage: ${opt:stage, 'dev'}
-  region:  ${file(config/env/${self:provider.stage}.yml):region}
+  region: ${file(config/env/${self:provider.stage}.yml):region}
   vpc: ${file(config/env/${self:provider.stage}.yml):vpc}
   deploymentBucket:
     name: cf-templates-5rrcz2248gen-${self:provider.region}
@@ -16,10 +19,13 @@ provider:
     restApiId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRoot}
     restApiRootResourceId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRootResourceId}
     restApiResources:
-      '/platform': ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformResource}
-      '/platform/v3': ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformV3Resource}
+      "/platform": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformResource}
+      "/platform/v3": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformV3Resource}
   environment:
     ENV_NAME: ${self:provider.stage}
+custom:
+  webpack:
+    includeModules: false
 
 functions: ${file(config/functions.yml)}
 #resources: ${file(config/resources.yml)}
