@@ -9,7 +9,10 @@ cd /projects
 sls create -u git@github.com:relaynetwork/rn-sls-template -p rn-sls-project-name
 cd rn-sls-project-name
 npm i
+git remote remove origin
+git remote add origin git@github.com:relaynetwork/rn-sls-project-name.git
 ```
+
 Reference: https://www.serverless.com/framework/docs/providers/aws/cli-reference/create/
 
 ## Structure
