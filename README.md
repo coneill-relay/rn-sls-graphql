@@ -6,7 +6,7 @@ Starting a serverless project requires boilerplate. This project will set up a d
 ## Usage
 ```shell script
 cd /projects
-sls create -u https://github.com/relaynetwork/rn-sls-template -p rn-sls-project-name
+sls create -u git@github.com/relaynetwork/rn-sls-template -p rn-sls-project-name
 cd rn-sls-project-name
 npm i
 ```
