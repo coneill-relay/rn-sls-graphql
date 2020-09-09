@@ -11,6 +11,7 @@ A prototype app for
 
 ```sh
 npm i
+sls offline
 ```
 
 ## Linting
