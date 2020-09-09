@@ -1,7 +1,5 @@
 get:
   handler: handlers/message.get
-  environment:
-    RN_TEST: "testing an env variable"
   events:
     - http:
         path: /message/{id}

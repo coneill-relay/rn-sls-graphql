@@ -1,9 +1,0 @@
-region: us-west-2
-
-vpc:
-  securityGroupIds:
-    - sg-17bdb06d
-  subnetIds:
-    - subnet-3b4dbd63
-    - subnet-3a87125e
-    - subnet-a3b814d5

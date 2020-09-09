@@ -7,7 +7,7 @@ const db = couchbase
     username: "admin",
     password: "password",
   })
-  .then((cluster) => cluster.bucket("relay_data"))
+  .then((cluster) => cluster.bucket("messages"))
   .then((bucket) => bucket.defaultCollection())
   .catch((e) => {
     console.log(e);
