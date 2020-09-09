@@ -3,7 +3,7 @@
 A prototype app for
 
 - [x] Couchbase from Lambda
-- [ ] GraphQL
+- [x] GraphQL
 
 ## Development
 
@@ -14,6 +14,14 @@ npm i
 ./scripts/bootstrap
 sls offline
 ```
+
+###Add Data
+POST an object with a property of `message`
+
+`curl -X POST localhost:3000/dev/message --data '{message: hello}'`
+
+###Graphql
+visit `http://localhost:300/dev/graphql` to play with the grapqhl playground to start making queries
 
 ## Linting
 
