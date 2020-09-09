@@ -1,5 +1,5 @@
 {
-  "name": "rn-sls-template",
+  "name": "rn-sls-message-api",
   "version": "1.0.0",
   "description": "Relay Network Serverless template. For use to bootstrap a serverless project with our libs and structure to reduce overhead",
   "main": "index.js",

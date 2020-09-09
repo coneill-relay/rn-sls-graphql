@@ -1,7 +1,7 @@
 # Template
 # Link to confluence page
 
-service: aws-nodejs-template
+service: rn-sls-message-api
 plugins:
   - serverless-webpack
 package:
@@ -15,12 +15,12 @@ provider:
   vpc: ${file(config/env/${self:provider.stage}.yml):vpc}
   deploymentBucket:
     name: cf-templates-5rrcz2248gen-${self:provider.region}
-  apiGateway:
-    restApiId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRoot}
-    restApiRootResourceId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRootResourceId}
-    restApiResources:
-      "/platform": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformResource}
-      "/platform/v3": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformV3Resource}
+  # apiGateway:
+  #   restApiId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRoot}
+  #   restApiRootResourceId: ${cf:rn-api-gateway-root-${self:provider.stage}.ApiGatewayRootResourceId}
+  #   restApiResources:
+  #     "/platform": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformResource}
+  #     "/platform/v3": ${cf:rn-api-gateway-root-${self:provider.stage}.PlatformV3Resource}
   environment:
     ENV_NAME: ${self:provider.stage}
 custom:
