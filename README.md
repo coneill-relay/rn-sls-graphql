@@ -2,8 +2,8 @@
 
 A prototype app for
 
-- Couchbase from Lambda
-- GraphQL
+- [x] Couchbase from Lambda
+- [ ] GraphQL
 
 ## Development
 
@@ -11,6 +11,7 @@ A prototype app for
 
 ```sh
 npm i
+./scripts/bootstrap
 sls offline
 ```
 
