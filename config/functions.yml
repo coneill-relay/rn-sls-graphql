@@ -15,3 +15,13 @@ post:
     - http:
         path: /message
         method: post
+
+graphql:
+  handler: handlers/graphql.graphqlHandler
+  events:
+    - http:
+        path: graphql
+        method: post
+    - http:
+        path: graphql
+        method: get

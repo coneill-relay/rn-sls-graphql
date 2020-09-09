@@ -1,12 +1,13 @@
 const path = require("path");
 const slsw = require("serverless-webpack");
+const nodeExternals = require("webpack-node-externals");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   target: "node",
   entry: slsw.lib.entries,
   mode: slsw.lib.webpack.isLocal ? "development" : "production",
-  externals: ["couchbase"],
+  externals: [nodeExternals()],
   optimization: {
     minimize: false,
   },
