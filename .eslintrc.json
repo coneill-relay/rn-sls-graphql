@@ -1,11 +1,17 @@
 {
-  "globals": {
-    "angular": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020, 
+    "sourceType": "module" 
   },
   "ignorePatterns": ["coverage/", "node_modules/", "nyc_output/", ".serverless/", "configs"],
-  "extends": "airbnb-base",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
   "rules": {
-    "import/no-unresolved": ["error", { "commonjs": false, "caseSensitive": true }],
     "camelcase": "off",
     "arrow-body-style": "off",
     "comma-dangle": "off",

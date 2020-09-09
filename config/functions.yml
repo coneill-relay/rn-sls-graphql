@@ -1,8 +1,12 @@
 hello:
-  handler: handlers/hello.hello
+  handler: handlers/message.get
   environment:
-    RN_TEST: 'testing an env variable'
+    RN_TEST: "testing an env variable"
   events:
     - http:
-        path: hello
+        path: /message/{id}
         method: get
+        request:
+          parameters:
+            paths:
+              id: true

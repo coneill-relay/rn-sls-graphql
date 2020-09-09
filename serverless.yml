@@ -4,6 +4,7 @@
 service: rn-sls-message-api
 plugins:
   - serverless-webpack
+  - serverless-offline
 package:
   individually: true
 provider:

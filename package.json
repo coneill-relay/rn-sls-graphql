@@ -1,7 +1,7 @@
 {
   "name": "rn-sls-message-api",
   "version": "1.0.0",
-  "description": "Relay Network Serverless template. For use to bootstrap a serverless project with our libs and structure to reduce overhead",
+  "description": "A Test Couchbase/GraphQL deploy",
   "main": "index.js",
   "directories": {
     "doc": "docs",
@@ -9,39 +9,40 @@
   },
   "scripts": {
     "test": "nyc mocha",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/relaynetwork/rn-sls-template.git"
+    "url": "git+ssh://git@https://github.com/coneill-relay/rn-sls-message-api.git"
   },
   "keywords": [
     "serverless"
   ],
-  "author": "Brendan Martin",
+  "author": "Chester ONeill",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/relaynetwork/rn-sls-template/issues"
+    "url": "https://github.com/coneill-relay/rn-sls-message-api/issues"
   },
-  "homepage": "https://github.com/relaynetwork/rn-sls-template#readme",
+  "homepage": "https://github.com/coneill-relay/rn-sls-message-api#readme",
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb": "^18.2.0",
+    "@types/aws-lambda": "^8.10.62",
+    "@types/node": "^14.6.4",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
     "eslint-plugin-import": "^2.22.0",
-    "istanbul": "^0.4.5",
+    "fork-ts-checker-webpack-plugin": "^5.1.0",
     "mocha": "^8.1.0",
     "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "proxyquire": "^2.1.3",
     "serverless": "^1.77.1",
+    "serverless-offline": "^6.7.0",
     "serverless-webpack": "^5.3.3",
     "sinon": "^9.0.2",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
     "webpack": "^4.44.1"
   },
-  "dependencies": {
-    "logger": "github:relaynetwork/rn-sls-lib-logger#v1.0.2"
-  }
+  "dependencies": {}
 }
