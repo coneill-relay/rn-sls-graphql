@@ -1,4 +1,4 @@
-hello:
+get:
   handler: handlers/message.get
   environment:
     RN_TEST: "testing an env variable"
@@ -10,3 +10,10 @@ hello:
           parameters:
             paths:
               id: true
+
+post:
+  handler: handlers/message.post
+  events:
+    - http:
+        path: /message
+        method: post
