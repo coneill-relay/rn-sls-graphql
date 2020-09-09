@@ -5,6 +5,11 @@ A prototype app for
 - [x] Couchbase from Lambda
 - [x] GraphQL
 
+Couchbase does not recommend or support the use of couchbase in a lambda environment.
+https://docs.couchbase.com/nodejs-sdk/current/project-docs/compatibility.html
+
+Issuing HTTP requests to an existing process running on EC2 would be a more suitable production setup.
+
 ## Development
 
 ### Getting Started
