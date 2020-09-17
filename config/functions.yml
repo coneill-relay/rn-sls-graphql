@@ -22,6 +22,32 @@ graphql:
     - http:
         path: graphql
         method: post
+        # request:
+        #   parameters:
+        #     headers:
+        #       my-header:
+        #         required: true
+        #         mappedValue: method.request.header.cookie
+        # cors:
+        #   origin: "*"
+        #   headers:
+        #     - Content-Type
+        #     - X-Amz-Date
+        #     - Authorization
+        #     - X-Api-Key
+        #     - X-Amz-Security-Token
+        #     - X-Amz-User-Agent
+        #   allowCredentials: true
     - http:
         path: graphql
         method: get
+        # cors:
+        #   origin: "*"
+        #   headers:
+        #     - Content-Type
+        #     - X-Amz-Date
+        #     - Authorization
+        #     - X-Api-Key
+        #     - X-Amz-Security-Token
+        #     - X-Amz-User-Agent
+        #   allowCredentials: true

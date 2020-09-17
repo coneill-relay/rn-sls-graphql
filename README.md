@@ -28,31 +28,26 @@ POST an object with a property of `message`
 
 ### Graphql
 
-#### Authentication
-
-To authenticate against our backend services th GraphQ: implementation mimics cookies that would normally be sent from the frontend. The API gateway event doesn't seem to send cookies by default so instead we stuff it into a "session" header and translate it in GraphQL to a cookie header.
-
-grab a valid `wire_id` cookie from your portal sessions
+Grab a valid `wire_id` cookie from your portal sessions
 
 #### Playground
 
-visit `http://localhost:300/dev/graphql` to play with the grapqhl playground to start making queries
+Visit `http://localhost:300/dev/graphql` to play with the grapqhl playground to start making queries
 
 add a `{ "session": "<your wire session id>"}` in the HTTP HEADERS section in the UI on the bottom left
 
+Due to a bug in the graphql playground it does not currently allow sending cookies or crednetials so this is a bit of a workaround.
+
 #### Curl
 
-Replace the `session` header value with a valid wire session id from your cookies.
+Replace the `cookie` header value with a valid wire session id from your cookies.
 
 ```sh
 curl 'http://localhost:3000/dev/graphql' \
   -H 'Accept-Encoding: gzip, deflate, br' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
-  -H 'Connection: keep-alive' \
-  -H 'DNT: 1' \
-  -H 'Origin: http://localhost:3000' \
-  -H 'session: wire_id=wire%3A8c987f90-c5cc-41a8-9ad7-7d8b1ce273fb;'\   # Your portal session
+  -H 'cookie: wire_id=wire%3A8c987f90-c5cc-41a8-9ad7-7d8b1ce273fb;'\   # Your portal session
    --data-binary '{"query":"{\n  client(id: \"len_qa_reports\") {\n    branding {\n      icon_s3_url\n      banner_s3_url\n    }\n    productGroup(id: \"default\") {\n      name\n    }\n  }\n}","variables":{"id":"1"}}' \
    --compressed
 ```

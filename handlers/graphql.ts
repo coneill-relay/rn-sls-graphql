@@ -61,15 +61,16 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({
-    event: {
-      headers: { session: cookie },
-    },
-  }) => {
-    return { headers: { cookie } };
+  context: ({ event }) => {
+    return {
+      headers: { cookie: event.headers.cookie || event.headers.session },
+    };
   },
   playground: {
     endpoint: "/dev/graphql",
+    settings: {
+      "request.credentials": "same-origin",
+    },
   },
 });
 
