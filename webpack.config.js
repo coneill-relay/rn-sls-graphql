@@ -6,18 +6,18 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 module.exports = {
   target: "node",
   entry: slsw.lib.entries,
-  mode: slsw.lib.webpack.isLocal ? "development" : "production",
+  mode: "production",
   externals: [nodeExternals()],
   optimization: {
     minimize: false,
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".js"],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         loader: "ts-loader",
         exclude: /node_modules/,
         options: {

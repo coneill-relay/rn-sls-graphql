@@ -46,6 +46,7 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "@graphql-tools/merge": "^6.2.3",
     "apollo-server-lambda": "^2.17.0",
     "axios": "^0.20.0",
     "couchbase": "^3.0.6",
