@@ -23,7 +23,7 @@ export default gql`
     trigger_id: String!
     updated_at: String!
     wire: WireMessage
-    productGroup(id: String): ProductGroup!
+    productGroup: ProductGroup!
   }
 
   type Query {

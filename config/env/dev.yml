@@ -1,1 +1,9 @@
-region: us-east-1
+region: us-east-2
+vpc:
+  securityGroupIds:
+    - sg-d3e6ebbb
+    - sg-56fdf03e
+  subnetIds:
+    - subnet-9c0ff3f4
+    - subnet-ca192ab1
+    - subnet-f31261be

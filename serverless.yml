@@ -1,4 +1,4 @@
-service: rn-sls-message-api
+service: rn-sls-graphql
 plugins:
   - serverless-webpack
   - serverless-offline
@@ -10,11 +10,12 @@ provider:
   versionFunctions: false
   stage: ${opt:stage, 'dev'}
   region: ${file(config/env/${self:provider.stage}.yml):region}
+  vpc: ${file(config/env/${self:provider.stage}.yml):vpc}
   environment:
     ENV_NAME: ${self:provider.stage}
 custom:
   webpack:
-    includeModules: false
+    includeModules: true
   serverless-offline:
     useChildProcesses: true
     allowCache: true

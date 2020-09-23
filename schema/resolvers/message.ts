@@ -65,11 +65,16 @@ export default {
   },
   Message: {
     productGroup: async (parent, args) => {
-      const response = await axios.get(
-        `http://config-service-api-dev.relaystaging.com:8020/platform/v3/internal/config/client/${parent.client_id}/product_group/${parent.wire.product_group_id}`
-      );
-      console.log(response.data.product_group);
-      return response.data.product_group;
+      try {
+        const response = await axios.get(
+          `http://config-service-api-dev.relaystaging.com:8020/platform/v3/internal/config/client/${parent.client_id}/product_group/${parent.wire.product_group_id}`,
+          { timeout: 2000 }
+        );
+        return response.data.product_group;
+      } catch (e) {
+        console.log(e);
+        throw e;
+      }
     },
   },
 };
