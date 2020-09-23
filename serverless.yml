@@ -15,6 +15,9 @@ provider:
 custom:
   webpack:
     includeModules: false
+  serverless-offline:
+    useChildProcesses: true
+    allowCache: true
 
 functions: ${file(config/functions.yml)}
 #resources: ${file(config/resources.yml)}
